@@ -18,6 +18,45 @@ function next() {
 
     let y = section2.scrollTop;
 
+    if (y == 0) {
+        
+    let image = document.querySelector('.image1');
+    image.classList.add('animation1');
+    ring.style.strokeDasharray="10, 1000";
+    let imaged = document.querySelector('.image2');
+    imaged.classList.add('animation2');
+    section2.style.backgroundColor = "white";
+    circle.style.backgroundColor = "rgb(184, 5, 184)";
+    section1.style.backgroundColor = "rgb(184, 5, 184)";
+    scrolls.children[0].classList.add('active');
+    scrolls2.children[0].classList.add('actives');
+    scrolls3.children[0].classList.add('activeses');
+scrolls.children[0].classList.add('popit');
+scrolls3.children[0].classList.add('popit3');
+
+dot2.style.fill="rgb(247, 250, 252)";
+dot2.style.opacity="0.5";
+document.querySelector('.dotsstro2').style.strokeWidth="0";
+document.querySelector('.h2-part2').children[0].classList.add('activate');
+document.querySelector('.h3-part3').children[0].classList.add('activate');
+document.querySelector('.h4-part4').children[0].classList.add('activated');
+document.querySelector('.temps').children[0].classList.add('temps1');
+document.querySelector('.temps').children[0].classList.add('act');
+
+
+} 
+else{
+    let image = document.querySelector('.image1');
+    image.classList.remove('animation1');
+    let imaged = document.querySelector('.image2');
+    imaged.classList.remove('animation2');
+    scrolls.children[0].classList.remove('active');   
+    document.querySelector('.temps').children[0].classList.remove('temps1'); 
+document.querySelector('.temps').children[0].classList.remove('act');
+
+}
+
+
     
     if (y > 700 && y < 1000) {       
 
@@ -338,44 +377,6 @@ scrolls2.children[6].classList.remove('actives');
 document.querySelector('.h3-part3').children[6].classList.remove('activate');
 document.getElementById('section2').style.backgroundImage="none";   
 document.querySelector('.h4-part4').children[6].classList.remove('activated');
-
-}
-
-if (y == 0) {
-        
-    let image = document.querySelector('.image1');
-    image.classList.add('animation1');
-    ring.style.strokeDasharray="10, 1000";
-    let imaged = document.querySelector('.image2');
-    imaged.classList.add('animation2');
-    section2.style.backgroundColor = "white";
-    circle.style.backgroundColor = "rgb(184, 5, 184)";
-    section1.style.backgroundColor = "rgb(184, 5, 184)";
-    scrolls.children[0].classList.add('active');
-    scrolls2.children[0].classList.add('actives');
-    scrolls3.children[0].classList.add('activeses');
-scrolls.children[0].classList.add('popit');
-scrolls3.children[0].classList.add('popit3');
-
-dot2.style.fill="rgb(247, 250, 252)";
-dot2.style.opacity="0.5";
-document.querySelector('.dotsstro2').style.strokeWidth="0";
-document.querySelector('.h2-part2').children[0].classList.add('activate');
-document.querySelector('.h3-part3').children[0].classList.add('activate');
-document.querySelector('.h4-part4').children[0].classList.add('activated');
-document.querySelector('.temps').children[0].classList.add('temps1');
-document.querySelector('.temps').children[0].classList.add('act');
-
-
-} 
-else{
-    let image = document.querySelector('.image1');
-    image.classList.remove('animation1');
-    let imaged = document.querySelector('.image2');
-    imaged.classList.remove('animation2');
-    scrolls.children[0].classList.remove('active');   
-    document.querySelector('.temps').children[0].classList.remove('temps1'); 
-document.querySelector('.temps').children[0].classList.remove('act');
 
 }
 
